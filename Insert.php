@@ -141,12 +141,12 @@ addLoadEvent(function() {
 <tr><td>Address:<br>
             <tr><td><textarea id="address" name="txtadres" rows="4" cols="50" required></textarea><br><br>
 
-           <tr><td> Gender:<br>
-						 <tr><td> Male
+            Gender:<br>
+					          Male
            <tr><td> <input type="radio" id="male" name="gender" value="male" required>
-           <tr><td> FeMale
+                   FeMale
            <tr><td> <input type="radio" id="female" name="gender" value="female" required>
-          <tr><td>  Other 
+                    Other 
           <tr><td> <input type="radio" id="other" name="gender" value="other" required>
           
 
