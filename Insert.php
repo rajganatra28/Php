@@ -38,7 +38,7 @@ states['Canada'] = new Array('Alberta','British Columbia','Ontario');
 states['Philippines'] = new Array('Manila','Albay','Cam-Sur');
 states['United States'] = new Array('California','Florida','New York');
  
- 
+	
 // City lists
 var cities = new Array();
 
@@ -47,7 +47,7 @@ cities['India']['U.P']          = new Array('Dg','Kanpur');
 cities['India']['Bihar']          = new Array('Baisi','Bhojpur');
 cities['India']['Delhi'] = new Array( 'Rohini','South Delhi');
 cities['India']['Gujarat']          = new Array('Ahmedabad','Rajkot');
-cities['India']['Keral'] = new Array('Tri','Pal');
+cities['India']['Kerala'] = new Array('Tri','Pal');
 cities['India']['Kasmir']          = new Array('Jammu','Manali');
 
 cities['pakistan'] = new Array();
@@ -149,8 +149,8 @@ addLoadEvent(function() {
          Other <input type="radio" id="other" name="gender" value="other" required>
           
 
-            <input type="submit" class="btn btn-primary w-100 mt-2" value="Submit">
-            <input type="reset" class="btn btn-danger w-100 mt-2" value="Clear">
+            <input type="submit" class="mb-2 btn btn-primary w-100 mt-2" value="Submit">
+            <input type="reset" class="mb-2 btn btn-danger w-100 mt-2" value="Clear">
         </form>
     </div>
 <script src="asset\js\script.js"></script>
