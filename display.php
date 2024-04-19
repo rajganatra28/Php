@@ -1,23 +1,12 @@
 <?php
-$con=mysqli_connect("localhost","root","","employ");
-		if(!$con)
+$con=mysqli_connect("localhost","root","","test1");
+
+		if(isset($_POST['user_name']))
 		{
-			echo "error";
-		}
-		if(isset($_POST['enmno']))
-		{
-			$name=$_POST['enmno'];
-			$sql="SELECT * FROM `contry` WHERE `name`='$name'";
+			$username=mysqli_real_escape_string($con,$_POST['user_name']);
+			$sql="SELECT * FROM `user_login` WHERE `username`='".$username."'";
 			$res=mysqli_query($con,$sql);
-			$count=mysqli_num_rows($res);
-			if($count>0)
-			{
-				echo "A";
-			}
-			else
-			{
-				echo "D";
-			}
+			echo mysqli_num_rows($res);
 		}
 		
 ?>
