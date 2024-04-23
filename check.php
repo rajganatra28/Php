@@ -28,33 +28,24 @@
   <label>Username:</label>
   <input type="text" name="username" id="username" class="form-control">
   <span id="availability"></span>
-  <input type="submit" value="login" id="register" name="registere" class="btn btn-info" disabled>
-  </form>
+ </form>
   </div>
   </div>
 </body>
 </html>
 <script>
 $(document).ready(function(){
-		$('#username').on('keyup',function(){
-			var username=$(#this).val();
+		$('#username').blur(function(){
+			var username=$(this).val();
 			$.ajax({
-				method:'POST',
-				url:'',
+				url:"POST",
+    method:"check.php",
 				data:{user_name:username},
-				success:function(data){
-					if(data != '0')
+    dataType:"text",
+				success:function(html)
 					{
-						$('#availability').html('<span class="text-danger">Username not available');
-      $('#register').attr("disabled",true);
+						$('#availability').html(html);
 					}
-					else
-					{
-						$('#availability').html('<span class="text-success">Username available');
-      $('#register').attr("disabled", false);
-					}
-					
-				}
 			});
 		});
 });
